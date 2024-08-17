@@ -1,0 +1,11 @@
+﻿@model List<Category>
+
+<h1>Category View</h1>
+<div>
+    @foreach(var obj in Model)
+    {
+        <h2>@obj.Name</h2>
+        <h3>@obj.Description</h3>
+    }
+    <a asp-controller="Category" asp-action="Create" class="btn btn-dark">Add Category</a>
+</div>
