@@ -1,0 +1,3 @@
+- This project performs CRUD operations using ASP.Net MVC, Entity Framework Core.
+- This is my first step in understanding making mvc application
+- Still have to add - Toastr for pop ups and make its view better **
