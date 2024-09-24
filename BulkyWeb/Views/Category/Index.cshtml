@@ -1,11 +1,16 @@
 ﻿@model List<Category>
 
+<partial name="_Notification" />
 <h1>Category View</h1>
+<a asp-controller="Category" asp-action="Create" class="btn btn-dark">Add Category</a>
+<a asp-controller="Category" asp-action="Index" class="btn btn-dark">Back to List</a>
+
 <div>
     @foreach(var obj in Model)
     {
         <h2>@obj.Name</h2>
         <h3>@obj.Description</h3>
+        <a asp-controller="Category" asp-action="Edit" class="btn btn-dark" asp-route-id="@obj.Id">Edit</a>
+        <a asp-controller="Category" asp-action="Delete" class="btn btn-danger"asp-route-id="@obj.Id">Delete</a>
     }
-    <a asp-controller="Category" asp-action="Create" class="btn btn-dark">Add Category</a>
 </div>
